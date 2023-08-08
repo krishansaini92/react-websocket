@@ -82,7 +82,7 @@
     "websocket",
     "websockets"
   ],
-  "author": "Robert Taussig <robert.taussig@gmail.com> (robtaussig.com)",
+  "author": "Krishan Saini <krishan@thinkscoopinc.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/robtaussig/react-use-websocket/issues"
