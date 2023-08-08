@@ -97,6 +97,15 @@ test('lastJsonMessage updates with a json object when websocket receives a messa
   expect(result.current.lastJsonMessage.name).toBe('Bob');
 })
 
+test('Options#eventSourceOptions, if provided, instantiates an EventSource instead of a WebSocket', async () => {
+  const {
+    result,
+    waitFor
+  } = renderHook(() => useEventSource(URL, options));
+
+  await waitFor(() => expect(result.current.getEventSource() instanceof EventSource).toBe(true));
+});
+
 test('sendMessage passes message to websocket and sends to server', async () => {
   const {
     result,
